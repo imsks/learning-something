@@ -5,11 +5,10 @@ const {
   GraphQLNonNull,
   GraphQLList,
 } = require('graphql');
-const AuthorType = require('./author');
 const BookType = require('./book');
 const data = require('../../data');
 
-exports.AuthorType = new GraphQLObjectType({
+const AuthorType = new GraphQLObjectType({
   name: 'Author',
   description: 'This represents an author of a book',
   fields: () => ({
@@ -23,3 +22,5 @@ exports.AuthorType = new GraphQLObjectType({
     },
   }),
 });
+
+module.exports = AuthorType;

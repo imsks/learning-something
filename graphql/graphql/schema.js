@@ -6,8 +6,9 @@ const {
   GraphQLInt,
   GraphQLNonNull,
 } = require('graphql');
-const BookType = require('./schema/book');
-const AuthorType = require('./schema/author');
+// const BookType = require('./schema/book');
+// const AuthorType = require('./schema/author');
+const Models = require('./models');
 const data = require('../data');
 
 const RootQueryType = new GraphQLObjectType({
@@ -15,7 +16,7 @@ const RootQueryType = new GraphQLObjectType({
   description: 'Root Query',
   fields: () => ({
     book: {
-      type: BookType,
+      type: Models.BookType,
       description: 'A single book',
       args: {
         id: { type: GraphQLInt },
@@ -25,12 +26,12 @@ const RootQueryType = new GraphQLObjectType({
       },
     },
     books: {
-      type: new GraphQLList(BookType),
+      type: new GraphQLList(Models.BookType),
       description: 'List of books',
       resolve: () => books,
     },
     author: {
-      type: AuthorType,
+      type: Models.AuthorType,
       description: 'A single author',
       args: {
         id: { type: GraphQLInt },
@@ -39,11 +40,11 @@ const RootQueryType = new GraphQLObjectType({
         return data.authors.find((author) => author.id === args.id);
       },
     },
-    // authors: {
-    //   type: new GraphQLList(AuthorType),
-    //   description: 'An authors list',
-    //   resolve: () => authors,
-    // },
+    authors: {
+      type: new GraphQLList(Models.AuthorType),
+      description: 'An authors list',
+      resolve: () => authors,
+    },
   }),
 });
 
@@ -52,7 +53,7 @@ const RootMutationType = new GraphQLObjectType({
   description: 'Root Mutation',
   fields: () => ({
     addAuthor: {
-      type: AuthorType,
+      type: Models.AuthorType,
       description: 'Add an author',
       args: {
         name: { type: GraphQLNonNull(GraphQLString) },
@@ -67,7 +68,7 @@ const RootMutationType = new GraphQLObjectType({
       },
     },
     addBook: {
-      type: BookType,
+      type: Models.BookType,
       description: 'Add a book',
       args: {
         name: { type: GraphQLNonNull(GraphQLString) },

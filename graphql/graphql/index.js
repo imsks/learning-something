@@ -6,4 +6,4 @@ const graphql = expressGraphQL.graphqlHTTP({
   graphiql: true,
 });
 
-modules.exports = graphql;
+module.exports = graphql;

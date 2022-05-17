@@ -7,7 +7,7 @@ const {
 const AuthorType = require('./author');
 const data = require('../../data');
 
-exports.BookType = new GraphQLObjectType({
+const BookType = new GraphQLObjectType({
   name: 'Book',
   description: 'This represents a book written by an author',
   fields: () => ({
@@ -22,3 +22,5 @@ exports.BookType = new GraphQLObjectType({
     },
   }),
 });
+
+module.exports = BookType;
