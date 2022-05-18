@@ -1,72 +1,101 @@
-# # # # # # # # # puts "Hello world" #hi
+# # # # # # # # # # # puts "Hello world" #hi
 
-# # # # # # # # =begin
+# # # # # # # # # # =begin
     
-# # # # # # # # rescue => exception
+# # # # # # # # # # rescue => exception
     
-# # # # # # # # =end
+# # # # # # # # # # =end
 
-# # # # # # # # # Hello
+# # # # # # # # # # # Hello
 
-# # # # # # # # myFirstVariable = "I've made a variable"
+# # # # # # # # # # myFirstVariable = "I've made a variable"
 
-# # # # # # # # puts myFirstVariable
+# # # # # # # # # # puts myFirstVariable
 
-# # # # # # # firstNumber = 6
-# # # # # # # secondNumber = 10
+# # # # # # # # # firstNumber = 6
+# # # # # # # # # secondNumber = 10
 
-# # # # # # # puts firstNumber + secondNumber
+# # # # # # # # # puts firstNumber + secondNumber
 
-# # # # # # myFirstString = "My name is Sachin"
+# # # # # # # # myFirstString = "My name is Sachin"
 
-# # # # # # puts myFirstString.include?("Sac")
+# # # # # # # # puts myFirstString.include?("Sac")
 
-# # # # # myArray = [5, 3, 5]
+# # # # # # # myArray = [5, 3, 5]
 
-# # # # # puts myArray.length
+# # # # # # # puts myArray.length
 
-# # # # # myFirstHash = {
-# # # # #     "name" => "Sachin"
-# # # # # }
+# # # # # # # myFirstHash = {
+# # # # # # #     "name" => "Sachin"
+# # # # # # # }
 
-# # # # # puts myFirstHash["name"]
+# # # # # # # puts myFirstHash["name"]
 
-# # # # myHash=Hash.new()
-# # # # myHash[:key] = "value"
-# # # # puts myHash[:key]
+# # # # # # myHash=Hash.new()
+# # # # # # myHash[:key] = "value"
+# # # # # # puts myHash[:key]
 
-# # # isFriend = "true"
+# # # # # isFriend = "true"
 
-# # # if isFriend == true
+# # # # # if isFriend == true
+# # # # #     puts "Hello"
+# # # # # elsif
+# # # # #     puts "Hello 2"
+# # # # # else
+# # # # #     puts "Goodbye"
+# # # # # end
+
+# # # # booleanOne = true
+# # # # randomCode = "Hi!"
+# # # # if booleanOne
+# # # #   puts "I will be printed!"
+# # # # elsif randomCode.length>=1
+# # # #   puts "Even though the above code is true, I won't be executed because the earlier if statement was true!"
+# # # # else
+# # # #   puts "I won't be printed because the if statement was executed!"
+# # # # end
+
+# # # isFriend = true
+
+# # # unless isFriend
 # # #     puts "Hello"
-# # # elsif
-# # #     puts "Hello 2"
 # # # else
-# # #     puts "Goodbye"
+# # #     puts "Hello 2"
+    
 # # # end
 
-# # booleanOne = true
-# # randomCode = "Hi!"
-# # if booleanOne
-# #   puts "I will be printed!"
-# # elsif randomCode.length>=1
-# #   puts "Even though the above code is true, I won't be executed because the earlier if statement was true!"
-# # else
-# #   puts "I won't be printed because the if statement was executed!"
+# # def sum(a, b)
+# #     return a + b
 # # end
 
-# isFriend = true
+# # result = sum(2, 3)
+# # puts result
 
-# unless isFriend
-#     puts "Hello"
-# else
-#     puts "Hello 2"
-    
-# end
 
-def sum(a, b)
-    return a + b
+# puts 2
+# BEGIN {
+#     puts 1
+# }
+# END {
+#     puts 0
+# }
+
+class Vehicle
+    def initialize()
+        @noOfWheels = 5
+        @horsePower
+        @typeOfTank
+    end
+
+    def speeding
+        puts @noOfWheels
+    end
+
+    def driving
+        puts "Driving"
+    end
 end
 
-result = sum(2, 3)
-puts result
+vehicle = Vehicle.new()
+
+puts vehicle.speeding
