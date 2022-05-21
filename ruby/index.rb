@@ -1,101 +1,115 @@
-# # # # # # # # # # # puts "Hello world" #hi
+# # # # # # # # # # # # puts "Hello world" #hi
 
-# # # # # # # # # # =begin
+# # # # # # # # # # # =begin
     
-# # # # # # # # # # rescue => exception
+# # # # # # # # # # # rescue => exception
     
-# # # # # # # # # # =end
+# # # # # # # # # # # =end
 
-# # # # # # # # # # # Hello
+# # # # # # # # # # # # Hello
 
-# # # # # # # # # # myFirstVariable = "I've made a variable"
+# # # # # # # # # # # myFirstVariable = "I've made a variable"
 
-# # # # # # # # # # puts myFirstVariable
+# # # # # # # # # # # puts myFirstVariable
 
-# # # # # # # # # firstNumber = 6
-# # # # # # # # # secondNumber = 10
+# # # # # # # # # # firstNumber = 6
+# # # # # # # # # # secondNumber = 10
 
-# # # # # # # # # puts firstNumber + secondNumber
+# # # # # # # # # # puts firstNumber + secondNumber
 
-# # # # # # # # myFirstString = "My name is Sachin"
+# # # # # # # # # myFirstString = "My name is Sachin"
 
-# # # # # # # # puts myFirstString.include?("Sac")
+# # # # # # # # # puts myFirstString.include?("Sac")
 
-# # # # # # # myArray = [5, 3, 5]
+# # # # # # # # myArray = [5, 3, 5]
 
-# # # # # # # puts myArray.length
+# # # # # # # # puts myArray.length
 
-# # # # # # # myFirstHash = {
-# # # # # # #     "name" => "Sachin"
-# # # # # # # }
+# # # # # # # # myFirstHash = {
+# # # # # # # #     "name" => "Sachin"
+# # # # # # # # }
 
-# # # # # # # puts myFirstHash["name"]
+# # # # # # # # puts myFirstHash["name"]
 
-# # # # # # myHash=Hash.new()
-# # # # # # myHash[:key] = "value"
-# # # # # # puts myHash[:key]
+# # # # # # # myHash=Hash.new()
+# # # # # # # myHash[:key] = "value"
+# # # # # # # puts myHash[:key]
 
-# # # # # isFriend = "true"
+# # # # # # isFriend = "true"
 
-# # # # # if isFriend == true
-# # # # #     puts "Hello"
-# # # # # elsif
-# # # # #     puts "Hello 2"
+# # # # # # if isFriend == true
+# # # # # #     puts "Hello"
+# # # # # # elsif
+# # # # # #     puts "Hello 2"
+# # # # # # else
+# # # # # #     puts "Goodbye"
+# # # # # # end
+
+# # # # # booleanOne = true
+# # # # # randomCode = "Hi!"
+# # # # # if booleanOne
+# # # # #   puts "I will be printed!"
+# # # # # elsif randomCode.length>=1
+# # # # #   puts "Even though the above code is true, I won't be executed because the earlier if statement was true!"
 # # # # # else
-# # # # #     puts "Goodbye"
+# # # # #   puts "I won't be printed because the if statement was executed!"
 # # # # # end
 
-# # # # booleanOne = true
-# # # # randomCode = "Hi!"
-# # # # if booleanOne
-# # # #   puts "I will be printed!"
-# # # # elsif randomCode.length>=1
-# # # #   puts "Even though the above code is true, I won't be executed because the earlier if statement was true!"
+# # # # isFriend = true
+
+# # # # unless isFriend
+# # # #     puts "Hello"
 # # # # else
-# # # #   puts "I won't be printed because the if statement was executed!"
+# # # #     puts "Hello 2"
+    
 # # # # end
 
-# # # isFriend = true
-
-# # # unless isFriend
-# # #     puts "Hello"
-# # # else
-# # #     puts "Hello 2"
-    
+# # # def sum(a, b)
+# # #     return a + b
 # # # end
 
-# # def sum(a, b)
-# #     return a + b
-# # end
-
-# # result = sum(2, 3)
-# # puts result
+# # # result = sum(2, 3)
+# # # puts result
 
 
-# puts 2
-# BEGIN {
-#     puts 1
-# }
-# END {
-#     puts 0
-# }
+# # puts 2
+# # BEGIN {
+# #     puts 1
+# # }
+# # END {
+# #     puts 0
+# # }
 
-class Vehicle
-    def initialize()
-        @noOfWheels = 5
-        @horsePower
-        @typeOfTank
-    end
+# class Vehicle
+#     def initialize()
+#         @noOfWheels = 5
+#         @horsePower
+#         @typeOfTank
+#     end
 
-    def speeding
-        puts @noOfWheels
-    end
+#     def speeding
+#         puts @noOfWheels
+#     end
 
-    def driving
-        puts "Driving"
+#     def driving
+#         puts "Driving"
+#     end
+# end
+
+# vehicle = Vehicle.new()
+
+# puts vehicle.speeding
+
+
+class Person
+
+    attr_accessor :name, :age
+
+    def initialize name
+        @name = name
+        @age = 5
     end
 end
 
-vehicle = Vehicle.new()
-
-puts vehicle.speeding
+person1 = Person.new("Jack")
+puts person1.age
