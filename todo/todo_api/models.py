@@ -8,7 +8,8 @@ class Todo(models.Model):
         auto_now_add=True, auto_now=False, blank=True)
     completed = models.BooleanField(default=False, blank=True)
     updated = models.DateTimeField(auto_now=True, blank=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, blank=True, null=True)
 
-    def __str__(self) -> str:
-        return super().__str__()
+    def __str__(self):
+        return self.task
